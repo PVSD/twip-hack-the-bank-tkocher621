@@ -5,7 +5,13 @@ import java.util.*;
 import java.text.*;
 public class Main {
 
-    public static void main(String[] args) {
+	public static void AppendToFile(bankAccount b) throws FileNotFoundException
+    {
+        PrintStream fileStream = new PrintStream(file);
+        fileStream.println(b.name + ":" + b.balance);
+    }
+	
+    public static void main(String[] args) throws FileNotFoundException {
 	// write your code here
         NumberFormat fmt = NumberFormat.getNumberInstance();
         fmt.setMinimumFractionDigits(2);
